@@ -1,0 +1,15 @@
+// @use 'sass:math';
+
+$base-color-primary: #1890ff;
+$base-color-success: #13ce66;
+$base-color-warning: #ffba00;
+$base-color-error: #ff4d4f;
+$base-color-info: #e0e0e0;
+
+:root {
+	--ml-color-primary: #1890ff;
+	--ml-color-success: #13ce66;
+	--ml-color-warning:#ffba00;
+	--ml-color-error: #ff4d4f;
+	--ml-color-info: #8b8b8b;
+}

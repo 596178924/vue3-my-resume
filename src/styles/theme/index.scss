@@ -1,0 +1,172 @@
+@use "./variables.scss";
+@use "./animations.scss";
+
+html,
+body {
+	&::-webkit-scrollbar {
+		width: 17px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+		background: var(--ml-color-primary, initial);
+		cursor: pointer;
+	}
+}
+
+html[color-scheme="dark"],
+html[perfers-color-scheme="dark"],
+html.dark {
+	color-scheme: dark;
+
+	--ml-color: #fff;
+	--ml-bg-color: #141414;
+	--ml-bg-color-hover: #242424;
+	--ml-bg-color-page: #0a0a0a;
+	--ml-bg-color-overlay: #1d1e1f;
+
+	--ml-text-color-primary: #e5eaf3;
+	--ml-text-color-regular: #cfd3dc;
+	--ml-text-color-secondary: #a3a6ad;
+	--ml-text-color-placeholder: #8d9095;
+	--ml-text-color-disabled: #6c6e72;
+
+	--ml-border-color: #4c4d4f;
+	--ml-border-color-hover: #747679;
+	--ml-border-color-dark: #58585b;
+	--ml-border-color-darker: #636466;
+	--ml-border-color-light: #414243;
+	--ml-border-color-lighter: #363637;
+	--ml-border-color-extra-light: #2b2b2c;
+
+	--ml-fill-color-darker: #424243;
+	--ml-fill-color-dark: #39393a;
+	--ml-fill-color: #303030;
+	--ml-fill-color-light: #262727;
+	--ml-fill-color-lighter: #1d1d1d;
+	--ml-fill-color-extra-light: #191919;
+	--ml-fill-color-blank: transparent;
+
+	--ml-mask-color: rgba(0, 0, 0, 0.8);
+	--ml-mask-color-extra-light: rgba(0, 0, 0, 0.3);
+
+	--ml-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72);
+	--ml-box-shadow-card: 0px 6px 12px 4px rgba(0, 0, 0, 0.36), 0px 6px 16px rgba(0, 0, 0, 0.72);
+	--ml-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
+	--ml-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72);
+	--ml-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000;
+
+	--ml-color-primary-1: var(--ml-color-primary-dark-1);
+	--ml-color-primary-3: var(--ml-color-primary-dark-3);
+	--ml-color-primary-5: var(--ml-color-primary-dark-5);
+	--ml-color-primary-7: var(--ml-color-primary-dark-7);
+	--ml-color-primary-9: var(--ml-color-primary-dark-9);
+	--ml-color-primary-2: var(--ml-color-primary-light-2);
+
+	--ml-color-info-1: var(--ml-color-info-dark-1);
+	--ml-color-info-3: var(--ml-color-info-dark-3);
+	--ml-color-info-5: var(--ml-color-info-dark-5);
+	--ml-color-info-7: var(--ml-color-info-dark-7);
+	--ml-color-info-9: var(--ml-color-info-dark-9);
+	--ml-color-info-2: var(--ml-color-info-light-2);
+
+	--ml-color-warning-1: var(--ml-color-warning-dark-1);
+	--ml-color-warning-3: var(--ml-color-warning-dark-3);
+	--ml-color-warning-5: var(--ml-color-warning-dark-5);
+	--ml-color-warning-7: var(--ml-color-warning-dark-7);
+	--ml-color-warning-9: var(--ml-color-warning-dark-9);
+	--ml-color-warning-2: var(--ml-color-warning-light-2);
+
+	--ml-color-success-1: var(--ml-color-success-dark-1);
+	--ml-color-success-3: var(--ml-color-success-dark-3);
+	--ml-color-success-5: var(--ml-color-success-dark-5);
+	--ml-color-success-7: var(--ml-color-success-dark-7);
+	--ml-color-success-9: var(--ml-color-success-dark-9);
+	--ml-color-success-2: var(--ml-color-success-light-2);
+
+	--ml-color-error-1: var(--ml-color-error-dark-1);
+	--ml-color-error-3: var(--ml-color-error-dark-3);
+	--ml-color-error-5: var(--ml-color-error-dark-5);
+	--ml-color-error-7: var(--ml-color-error-dark-7);
+	--ml-color-error-9: var(--ml-color-error-dark-9);
+	--ml-color-error-2: var(--ml-color-error-light-2);
+}
+html[color-scheme="light"],
+html[perfers-color-scheme="light"],
+html.light {
+	color-scheme: light;
+
+	--ml-color: #000;
+	--ml-bg-color: #ffffff;
+	--ml-bg-color-hover: #f5f5f5;
+	--ml-bg-color-page: #f2f3f5;
+	--ml-bg-color-overlay: #ffffff;
+
+	--ml-text-color-primary: #303133;
+	--ml-text-color-regular: #606266;
+	--ml-text-color-secondary: #909399;
+	--ml-text-color-placeholder: #a8abb2;
+	--ml-text-color-disabled: #c0c4cc;
+
+	--ml-border-color: #e6e6e6;
+	--ml-border-color-hover: #e0e0e0;
+	--ml-border-color-dark: #d4d7de;
+	--ml-border-color-darker: #cdd0d6;
+	--ml-border-color-light: #e4e7ed;
+	--ml-border-color-lighter: #ebeef5;
+	--ml-border-color-extra-light: #f2f6fc;
+
+	--ml-fill-color: #f0f2f5;
+	--ml-fill-color-light: #f5f7fa;
+	--ml-fill-color-lighter: #fafafa;
+	--ml-fill-color-extra-light: #fafcff;
+	--ml-fill-color-dark: #ebedf0;
+	--ml-fill-color-darker: #e6e8eb;
+	--ml-fill-color-blank: #ffffff;
+
+	--ml-mask-color: rgba(255, 255, 255, 0.9);
+	--ml-mask-color-extra-light: rgba(255, 255, 255, 0.3);
+
+	--ml-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
+	--ml-box-shadow-card: 0px 6px 12px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
+	--ml-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
+	--ml-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
+	--ml-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
+		0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+
+	--ml-color-primary-1: var(--ml-color-primary-light-1);
+	--ml-color-primary-3: var(--ml-color-primary-light-3);
+	--ml-color-primary-5: var(--ml-color-primary-light-5);
+	--ml-color-primary-7: var(--ml-color-primary-light-7);
+	--ml-color-primary-9: var(--ml-color-primary-light-9);
+	--ml-color-primary-2: var(--ml-color-primary-dark-2);
+
+	--ml-color-info-1: var(--ml-color-info-light-1);
+	--ml-color-info-3: var(--ml-color-info-light-3);
+	--ml-color-info-5: var(--ml-color-info-light-5);
+	--ml-color-info-7: var(--ml-color-info-light-7);
+	--ml-color-info-9: var(--ml-color-info-light-9);
+	--ml-color-info-2: var(--ml-color-info-dark-2);
+
+	--ml-color-warning-1: var(--ml-color-warning-light-1);
+	--ml-color-warning-3: var(--ml-color-warning-light-3);
+	--ml-color-warning-5: var(--ml-color-warning-light-5);
+	--ml-color-warning-7: var(--ml-color-warning-light-7);
+	--ml-color-warning-9: var(--ml-color-warning-light-9);
+	--ml-color-warning-2: var(--ml-color-warning-dark-2);
+
+	--ml-color-success-1: var(--ml-color-success-light-1);
+	--ml-color-success-3: var(--ml-color-success-light-3);
+	--ml-color-success-5: var(--ml-color-success-light-5);
+	--ml-color-success-7: var(--ml-color-success-light-7);
+	--ml-color-success-9: var(--ml-color-success-light-9);
+	--ml-color-success-2: var(--ml-color-success-dark-2);
+
+	--ml-color-error-1: var(--ml-color-error-light-1);
+	--ml-color-error-3: var(--ml-color-error-light-3);
+	--ml-color-error-5: var(--ml-color-error-light-5);
+	--ml-color-error-7: var(--ml-color-error-light-7);
+	--ml-color-error-9: var(--ml-color-error-light-9);
+	--ml-color-error-2: var(--ml-color-error-dark-2);
+
+	// --ml-color-primary-dark-2
+}
